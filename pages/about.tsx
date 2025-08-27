@@ -10,11 +10,9 @@ import Link from 'next/link';
 /* -------------------------- Internal Dependencies ------------------------- */
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
-import dynamic from 'next/dynamic';
 
 /* ---------------------------- Image Dependency ---------------------------- */
 import { Date, Github,Product } from '../components/Icons';
-const SkillsStore = dynamic(() => import('../components/SkillsStore'), { ssr: false });
 
 const About = () => {
   return (
@@ -118,12 +116,8 @@ const About = () => {
           className="mb-5"
           aria-label="You are now in my musical playlist section"
         >
-          <div style={{ marginTop: '2rem' }}>
-            <h2 className="intro__text">Skills</h2>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <SkillsStore />
-            </div>
-          </div>
+          
+            
         </PageWrapper>
       </PageSection>
 
