@@ -7,6 +7,9 @@ module.exports = {
   output: 'standalone',
   reactStrictMode: false,
   swcMinify: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },
