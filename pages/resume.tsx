@@ -12,13 +12,13 @@ import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
 const Resume = () => {
+  // Use your Google Docs resume link
   const resumeData =
-    'https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
+    'https://docs.google.com/document/d/1yOBbCqmMtrcA8jropqUqdV3kVwIxZmKaF0YHJdmWg7s/edit?usp=sharing';
 
-  const previewData = `${resumeData.substr(
-    0,
-    resumeData.lastIndexOf('/') + 1
-  )}view?embed`;
+  // For preview, use the embed version of your Google Doc
+  const previewData =
+    'https://docs.google.com/document/d/1yOBbCqmMtrcA8jropqUqdV3kVwIxZmKaF0YHJdmWg7s/preview';
 
   return (
     <Layout title="Resume">
@@ -34,10 +34,10 @@ const Resume = () => {
               .{' '}
               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+                  href={resumeData}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Go to Resumé Page"
+                  aria-label="View Resume"
                 >
                   view
                 </a>
@@ -45,10 +45,10 @@ const Resume = () => {
               or{' '}
               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+                  href={resumeData}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Go to Resumé Page"
+                  aria-label="Download Resume"
                 >
                   download
                 </a>
@@ -62,7 +62,7 @@ const Resume = () => {
             allowFullScreen
             width="740"
             height="780"
-            title="Adenekan Wonderful Resumé"
+            title="Your Resume"
           />
         </PageSection>
         <br />

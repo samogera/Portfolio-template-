@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -36,21 +36,20 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          {this.props.styleTags}
-          <meta name="author" content="Adenekan Wonderful" />
+          <meta name="author" content="Samuel Ogera" />
           <meta
             name="keywords"
-            content="Adenekan Wonderful, codewonders, codewonders.dev, codewonders.us, affinity developer."
+            content="Samuel Ogera, samogera, samuel, hillary, samuel ogera hillary."
           />
           <meta property="og:locale" content="en-US" />
           <meta property="og:type" content="website" />
           <meta
             name="description"
-            content="Hi, I&#x27;m Adenekan Wonderful, Frontend developer, UX architect, and JavaScript engineer."
+            content="Hi, I&#x27;m Samuel Ogera, Founder, Software developer, and AI engineer."
           />
           <meta
             property="og:description"
-            content="Hi, I&#x27;m Adenekan Wonderful, Frontend developer, UX architect, and JavaScript engineer."
+            content="Hi, I&#x27;m Samuel Ogera, Founder, Software developer, and AI engineer."
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="mobile-web-app-capable" content="yes" />

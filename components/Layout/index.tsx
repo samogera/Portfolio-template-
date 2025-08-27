@@ -42,7 +42,7 @@ const Layout: React.FC<PropsWithChildren<{
     <Main>
       <BodyStyling theme={theme} />
       <Head>
-        <title>{`${title} | Adenekan Wonderful | Codewonders`}</title>
+        <title>{`${title} | Samuel Ogera | Developer`}</title>
         <meta
           name="msapplication-TileColor"
           content={`${theme ? '#000000' : '#FFFFFF'}`}
@@ -53,11 +53,11 @@ const Layout: React.FC<PropsWithChildren<{
       <Navbar />
       <BackLay title={title}>
         <h1 aria-hidden="true">
-          {title === 'Home' ? 'CW.' : title.concat('.')}
+          {title === 'Home' ? 'SO.' : title.concat('.')}
         </h1>
       </BackLay>
       <Cursor />
-      <ScoutBar actions={actions(setTheme)} brandColor="var(--cw)" />
+      <ScoutBar actions={actions(setTheme)} brandColor="var(--so)" />
       {!show && <>{children}</>}
     </Main>
   );

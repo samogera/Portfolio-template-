@@ -22,48 +22,35 @@ const Home = () => {
     <Layout>
       <PageSection color={color}>
         <PageWrapper>
-          <article>
+    
             <motion.h1
-              data-text="I'm Adenekan Wonderful"
+              data-text="I'm Samuel Ogera"
               className="intro__text"
               {...getTransitions(0.1)}
             >
-              <mark className="mark">I&apos;m Adenekan Wonderful</mark>
+              <mark className="mark">I&apos;m Samuel Ogera</mark>
             </motion.h1>
             <motion.p {...getTransitions(0.3)}>
               {' '}
-              Your friendly neighborhood frontend developer, UX architect, and
-              JavaScript engineer. I spend my days (and often nights) painting
-              the Internet canvas with{' '}
+              I’m a Junior AI Engineer and Software Developer passionate about building
+  intelligent applications and scalable products. From AI agents and
+  full-stack systems to automation tools, I turn ideas into working code. You
+  can explore some of my{' '}
               <Link href="/projects" aria-label="Go to Projects Page">
                 Projects
               </Link>{' '}
-              and lines of code, turning zeroes and ones into immersive,
-              interactive experiences,{' '}
+              where I bring together creativity, problem-solving, and execution.{' '}
             </motion.p>
             <motion.p {...getTransitions(0.5)}>
-              Bona fide photochromic{' '}
-              <Link href="/articles" aria-label="Check out my Lens">
-                Lens
-              </Link>{' '}
-              enthusiast - sunlight or indoors, I&apos;ve got it covered. I
-              tread the path of minimalism, finding beauty in simplicity and
-              order. When I'm not crafting beautiful web experiences, you can
-              find me reading{' '}
-              <Link
-                href="/articles"
-                aria-label="Go to Articles Page And Check What I Read"
-              >
-                Articles
-              </Link>{' '}
-              or swaying to the rhythm of Pop Music & Jazz, losing myself in the
-              captivating flow of melodies. anyways you can{' '}
+              I’m also an entrepreneur and community builder — co-founder of BrightEco
+  Pay and MatXchange, and City Leader at Founders Live Kigali. I believe in
+  technology that drives inclusion and impact, especially across Africa.
+   Let’s connect —{' '}
               <Link href="/contact" aria-label="Go to Contact Page">
                 Contact Me
               </Link>
             </motion.p>
-          </article>
-
+            
           <br />
           <motion.div {...getTransitions(0.7)}>
             <FooterLink goto="/about">See More About Me</FooterLink>

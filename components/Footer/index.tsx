@@ -10,11 +10,9 @@ import styled from 'styled-components';
 import {
   IconRight,
   Twitter,
-  Facebook,
   Linkedin,
   Github,
   Instagram,
-  Dribble,
 } from '../Icons';
 
 /* ---------------------------- Style Dependency ---------------------------- */
@@ -45,26 +43,18 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://twitter.com/code_wonders"
-          aria-label="Go To Adenekan Wonderful Twitter Page"
+          href="https://x.com/Samuelohillary"
+          aria-label="Go To Samuel Ogera's X page"
           title="Twitter Page"
         >
           <Twitter />
         </a>
+    
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.facebook.com/AdenekanWonderful"
-          aria-label="Go To Adenekan Wonderful Facebook Page"
-          title="Facebook Page"
-        >
-          <Facebook />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://linkedin.com/in/codewonders"
-          aria-label="Go To Adenekan Wonderful Linkedin Page"
+          href="https://www.linkedin.com/in/samuelogera/"
+          aria-label="Go To Samuel Ogera's Linkedin"
           title="Linkedin Page"
         >
           <Linkedin />
@@ -72,26 +62,18 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/adenekan41"
-          aria-label="Go To Adenekan Wonderful Github Page"
+          href="https://github.com/samogera"
+          aria-label="Go To Samuel Ogera's Github"
           title="Github Page"
         >
           <Github />
         </a>
+        
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://dribbble.com/codewonders"
-          aria-label="Go To Adenekan Wonderful Dribble Page"
-          title="Dribbble Page"
-        >
-          <Dribble />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://instagram.com/codewonders"
-          aria-label="Go To Adenekan Wonderful Instagram Page"
+          href="https://www.instagram.com/samuel.ogera/"
+          aria-label="Go To Samuel Ogera's Instagram Page"
           title="Instagram Page"
         >
           <Instagram />

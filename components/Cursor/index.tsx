@@ -24,8 +24,8 @@ const Cursor = () => {
   const delay = 8;
   const _x = useRef(0);
   const _y = useRef(0);
-  const endX = useRef(process.browser ? window.innerWidth / 2 : 0);
-  const endY = useRef(process.browser ? window.innerHeight / 2 : 0);
+  const endX = useRef(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
+  const endY = useRef(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
 
   const cursorVisible = useRef(true);
   const cursorEnlarged = useRef(false);
@@ -33,7 +33,7 @@ const Cursor = () => {
   const requestRef = useRef<number | null>(null);
 
   const toggleCursorVisibility = useCallback(() => {
-    if (dot?.current && dotOutline?.current)
+    if (dot?.current && dotOutline?.current) {
       if (cursorVisible.current) {
         dot.current.style.opacity = '1';
         dotOutline.current.style.opacity = '1';
@@ -41,15 +41,17 @@ const Cursor = () => {
         dot.current.style.opacity = '0';
         dotOutline.current.style.opacity = '0';
       }
+    }
   }, []);
 
   const toggleCursorSize = useCallback(() => {
-    if (dot?.current && dotOutline?.current)
+    if (dot?.current && dotOutline?.current) {
       if (cursorEnlarged.current) {
         setMouseActive(true);
       } else {
         setMouseActive(false);
       }
+    }
   }, []);
 
   const mouseOverEvent = useCallback(
@@ -163,32 +165,36 @@ const CursorStyle = styled.div<CursorStyleProps>`
       transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
     }
 
+    /* Inner glowing dot */
     .cursor-dot {
-      width: 8px;
-      height: 8px;
-      box-shadow: inset 0 0 0px 0.5px var(--light-gray);
-      background-color: var(--gray);
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #34c759, #37609c);
+      box-shadow: 0 0 10px #34c759, 0 0 20px #37609c;
     }
 
+    /* Soft glowing outline */
     .cursor-dot-outline {
-      width: 85px;
-      height: 85px;
-      border: 1px solid var(--gray);
-      box-shadow: inset 0 0 0px 0.5px var(--light-gray);
+      width: 60px;
+      height: 60px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      animation: pulse 1.5s infinite ease-in-out;
     }
 
+    /* Active hover state */
     ${({ cursorActive }) =>
       cursorActive
         ? css`
             .cursor-dot {
               transform: translate(-50%, -50%) scale(2.2);
-              background: hsla(0, 0%, 100%, 0.3);
+              background: radial-gradient(circle, #34c759, #37609c);
+              box-shadow: 0 0 15px #34c759, 0 0 25px #37609c;
               border: 1px solid #fff;
             }
 
             .cursor-dot-outline {
-              box-shadow: none;
               transform: translate(-50%, -50%) scale(0);
+              opacity: 0;
             }
           `
         : css`
@@ -199,6 +205,19 @@ const CursorStyle = styled.div<CursorStyleProps>`
               transform: translate(-50%, -50%) scale(1);
             }
           `}
+
+    /* Pulse animation for outline */
+    @keyframes pulse {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.2;
+      }
+    }
   }
 `;
+
 export default Cursor;
