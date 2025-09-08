@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
             name="msapplication-config"
             content="/icons/browserconfig.xml"
           />
-          <meta name="twitter:site" content="@code_wonders" />
+          <meta name="twitter:site" content="@samogera" />
           <meta
             name="twitter:image"
             content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
